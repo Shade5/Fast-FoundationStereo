@@ -57,7 +57,7 @@ To trade-off speed and accuracy, there are two options:
 
 # Run demo
 ```
-python scripts/run_demo.py --model_dir weights/23-36-37/model_best_bp2_serialize.pth --left_file assets/left.png --right_file assets/right.png --intrinsic_file assets/K.txt --out_dir output/ --remove_invisible 0 --denoise_cloud 1  --scale 1 --get_pc 1 --valid_iters 8 --zfar 100
+python scripts/run_demo.py --model_dir weights/23-36-37/model_best_bp2_serialize.pth --left_file assets/left.png --right_file assets/right.png --intrinsic_file assets/K.txt --out_dir output/ --remove_invisible 0 --denoise_cloud 1  --scale 1 --get_pc 1 --valid_iters 8 --max_disp 192 --zfar 100
 ```
 | Flag                        | Meaning                                                                |
 |-----------------------------|------------------------------------------------------------------------|
@@ -71,6 +71,7 @@ python scripts/run_demo.py --model_dir weights/23-36-37/model_best_bp2_serialize
 | `--scale`                   | Image scaling factor                                                   |
 | `--get_pc`                  | Obtain point cloud output (0: no, 1: yes)                              |
 | `--valid_iters`             | Number of refinement updates during forward pass                       |
+| `--max_disp`                | Maximum disparity for volume encoding, 192 should be enough, unless you need to sense very near objects (e.g. <0.1m). Increasing it runs slower and uses more memory. |
 | `--zfar`                    | Maximum depth to include in point cloud                                |
 
 Refer to `scripts/run_demo.py` for comprehensive list of flags.

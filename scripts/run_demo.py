@@ -36,6 +36,7 @@ if __name__=="__main__":
   parser.add_argument('--hiera', default=0, type=int)
   parser.add_argument('--get_pc', type=int, default=1, help='save point cloud output')
   parser.add_argument('--valid_iters', type=int, default=8, help='number of flow-field updates during forward pass')
+  parser.add_argument('--max_disp', type=int, default=192, help='maximum disparity')
   parser.add_argument('--zfar', type=float, default=100, help="max depth to include in point cloud")
   args = parser.parse_args()
 
@@ -54,6 +55,7 @@ if __name__=="__main__":
   logging.info(f"args:\n{args}")
   model = torch.load(args.model_dir, map_location='cpu', weights_only=False)
   model.args.valid_iters = args.valid_iters
+  model.args.max_disp = args.max_disp
 
   model.cuda().eval()
 
