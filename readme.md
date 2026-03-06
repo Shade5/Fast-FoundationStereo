@@ -4,7 +4,7 @@ This is the official implementation of our paper accepted to CVPR 2026
 
 [[Website]](https://nvlabs.github.io/Fast-FoundationStereo/) [[Paper]](https://arxiv.org/abs/2512.11130) [[Video]](https://www.youtube.com/watch?v=2BUYZojCzXE)
 
-Authors: Bowen Wen, Shaurya Dewan, Stan Birchfield
+Authors: [Bowen Wen](https://wenbowen123.github.io/), [Shaurya Dewan](https://www.linkedin.com/in/shaurya-dewan-1b07231a2), [Stan Birchfield](https://research.nvidia.com/person/stan-birchfield)
 
 
 # Abstract
